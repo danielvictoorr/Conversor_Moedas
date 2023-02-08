@@ -96,7 +96,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 <body>
 
 	<div id="" class="container">
-		<h1 class="mt-2 text-center">Conversor de moeda</h1>
+		<h1 class="mt-2 text-center">Conversor de moedas</h1>
 		<div id="input_valores" class="col-lg-2 centered">
 			<label for="" class=""> <strong>Valor a ser convertido</strong></label>
 			<input type="text" id='val' class="row mt-1" placeholder="Digite um valor em R$">
