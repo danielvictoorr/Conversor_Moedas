@@ -96,7 +96,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 </head>
 
 <body>
-<nav class="navbar navbar-expand-sm   navbar-light bg-light">
+<nav class="navbar navbar-expand-sm   navbar-light bg-light" style="margin-top: -35px;">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -127,13 +127,13 @@ defined('BASEPATH') or exit('No direct script access allowed');
           </li>-->
           </ul>
           <div class="social-part">
-            <i class="fa fa-github" aria-hidden="true"></i>
-            <i class="fa fa-twitter" aria-hidden="true"></i>
-            <i class="fa fa-instagram" aria-hidden="true"></i>
+            <a href="https://github.com/danielvictoorr" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+            <a href="https://twitter.com/daniboy_victor" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+            <a href="https://github.com/danielvictoorr" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
           </div>
         </div>
       </nav>
-	<div id="" class="container">
+	<div id="conversor" class="container">
 		<h1 class="mt-2 text-center">Conversor de moedas</h1>
 		<div id="input_valores" class="col-lg-2 centered">
 			<label for="" class=""> <strong>Valor a ser convertido</strong></label>
