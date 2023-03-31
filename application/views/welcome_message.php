@@ -9,8 +9,10 @@ defined('BASEPATH') or exit('No direct script access allowed');
 	<meta charset="utf-8">
 	<title>Conversor de Moeda</title>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-
-
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Raleway:400,500,500i,700,800i" rel="stylesheet">
+	<link rel="stylesheet" href="styles/estilos.css">
 	<style type="text/css">
 		::selection {
 			background-color: #E13300;
@@ -94,12 +96,48 @@ defined('BASEPATH') or exit('No direct script access allowed');
 </head>
 
 <body>
+<nav class="navbar navbar-expand-sm   navbar-light bg-light">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Conversor de Moedas <span class="sr-only">(current)</span></a>
+            </li>
+            <!-- <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item dropdown dmenu">
+            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+              Our Service
+            </a>
+            <div class="dropdown-menu sm-menu">
+              <a class="dropdown-item" href="#">service2</a>
+              <a class="dropdown-item" href="#">service 2</a>
+              <a class="dropdown-item" href="#">service 3</a>
+            </div>
+          </li> -->
+          <!-- <li class="nav-item">
+            <a class="nav-link" href="#">Contact Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Call</a>
+          </li>-->
+          </ul>
+          <div class="social-part">
+            <i class="fa fa-github" aria-hidden="true"></i>
+            <i class="fa fa-twitter" aria-hidden="true"></i>
+            <i class="fa fa-instagram" aria-hidden="true"></i>
+          </div>
+        </div>
+      </nav>
 	<div id="" class="container">
 		<h1 class="mt-2 text-center">Conversor de moedas</h1>
 		<div id="input_valores" class="col-lg-2 centered">
 			<label for="" class=""> <strong>Valor a ser convertido</strong></label>
-			<input type="text" id='val' class="row mt-1" placeholder="Digite um valor em R$">
+			<input type="text" id='val' class="row mt-1 tamanho_campo" placeholder="Digite um valor em R$">
 			<select name="" id="select_moeda" class="row mt-2">
 				<option selected='disable'>Selecione</option>
 				<?php foreach ($listarMoedas as $key => $moedas) { ?>
@@ -107,7 +145,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 				<?php } ?>
 			</select>
 			<button class="btn btn-primary row mt-1 mb-4" id='converte_moeda'>Converter</button>
-			<input type="text mt-3" class="row" value="" id="resultado" placeholder="">
+			<input type="text mt-3" class="row tamanho_campo" value="" id="resultado" placeholder="">
 		</div>
 	</div>
 
@@ -125,7 +163,6 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 	$('#converte_moeda').on('click', function() {
 		let valor_final = '';
-		console.log(cotacao);
 
 		let valor = document.getElementById('val').value;
 
